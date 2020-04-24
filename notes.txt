@@ -1,0 +1,70 @@
+2020-04-24
+
+Joining on entso because it only has 50 records
+Task put different, we are trying to find the 50 records in entso in the gppd and platts datasets
+
+Hints
+    1) fuel_thesaurus is mapping of entso to gppd by fuel_type 
+        - won't be 1-1 but will dramatically narrow potential joins
+    2)   ‘wepp_id’  in gppd to plant_id in platts
+        - could use this mapping to chain entso <- platts <- gppd
+    3) plant, country, fuel_type are strong keys
+
+
+Number of entries in each dataset:
+    entso: 50
+    platts: 68395
+    gppd: 29910
+
+
+Ideas of matching along entso columns
+entso.csv columns:
+    unit_id	
+    unit_capacity_mw	
+    unit_fuel	
+    country	unit_name	
+    plant_name	
+    plant_capacity_mw
+
+
+entso.csv columns:
+    unit_id	
+    unit_capacity_mw	
+    unit_fuel	
+    country	unit_name	
+    plant_name	
+    plant_capacity_mw
+
+gppd.csv columns:
+    plant_id	
+    plant_name	
+    latitude	
+    longitude	
+    wepp_id	
+    country	
+    country_long	
+    plant_capacity_mw	
+    plant_primary_fuel	
+    commissioning_year	
+    owner
+
+platts.csv columns:
+    plant_id	
+    unit_id	
+    PLANT	
+    UNIT	
+    COMPANY	
+    UNIT_CAPACITY_MW	
+    YEAR	
+    UNIT_FUEL	
+    CITY	
+    STATE	
+    AREA	
+    COUNTRY	
+    SUBREGION
+
+
+fuel_thesaurus.csv columns
+    unit_fuel_platts_entsoe
+    plant_primary_fuel_gppd	
+    note
