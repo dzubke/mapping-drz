@@ -1,0 +1,71 @@
+unit_fuel_platts_entsoe,plant_primary_fuel_gppd,note
+agas,Waste,
+bfg,Gas,
+bgas,Waste,
+biomass,Biomass,
+bl,Biomass,
+cgas,Coal,
+coal,Coal,
+cog,Coal,
+coke,Petcoke,
+csgas,Coal,
+cwm,Coal,
+dgas,Waste,
+dme,Waste,
+fgas,Gas,
+fossil brown coal/lignite,Coal,Used in Enstoe
+fossil coal-derived gas,Gas,Made this match coal-derived gas
+fossil gas,Gas,
+fossil hard coal,Coal,
+fossil oil,Oil,
+fossil oil shale,Oil,
+fossil peat,Coal,
+gas,Gas,
+geo,Geothermal,
+geothermal,Geothermal,
+h2,Other,
+helium,Other,
+hydro pumped storage,Hydro,
+hydro run-of-river and poundage,Hydro,
+hydro water reservoir,Hydro,
+hzdwst,Waste,
+indwst,Waste,
+jet,Oil,
+kero,Oil,
+lgas,Waste,
+lignin,Biomass,
+liq,Biomass,
+lng,Gas,
+lpg,Gas,In Platts listed as Liquified petroleum gas (usually butane or propane)
+mbm,Biomass,In Platts listed as Meat and bonemeal
+medwst,Waste,In Platts listed as Medical waste
+mgas,Gas,In Platts listed as Mine gas (methane from active or abandoned coal mines)
+nap,Gas,In Platts listed as Naphtha
+nuclear,Nuclear,
+ogas,Oil,In Platts listed as Gasified crude oil or refinery bottoms or bitumen
+oil,Oil,
+other,Other,
+peat,Coal,Not technically a fossil fuel but peat burning has a carbon footprint similar or higher than coal
+pwst,Waste,In Platts listed as Paper mill waste or sludges or wastepaper
+ref,Waste,
+refgas,Waste,In Platts listed as Syngas from gasified refuse
+ret,Other,In Platts listed as Retired
+rgas,Gas,In Platts listed as Refinery off-gas
+rpf,Waste,In Platts listed as Waste paper and/or waste plastic
+shale,Oil,
+solar,Solar,
+sun,Solar,
+tgas,Gas,In Platts listed as Top gas
+tires,Waste,In Platts listed as Scrap tires
+unk,Other,
+ur,Nuclear,In Platts listed as Uranium
+waste,Waste,
+wat,Hydro,
+wind,Wind,
+wind offshore,Wind,
+wind onshore,Wind,
+wood,Biomass,
+woodgas,Biomass,In Platts listed as Wood or wood-waste fuel and  natural gas
+wstgas,Waste,In Platts listed as Waste gas or low calorific gas (LCV from refinery or other industrial processes)
+wsth,Waste,
+wstwsl,Waste,In Platts listed as Wastewater sludge
