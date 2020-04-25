@@ -6,15 +6,28 @@ Task put different, we are trying to find the 50 records in entso in the gppd an
 Hints
     1) fuel_thesaurus is mapping of entso to gppd by fuel_type 
         - won't be 1-1 but will dramatically narrow potential joins
-    2)   ‘wepp_id’  in gppd to plant_id in platts
-        - could use this mapping to chain entso <- platts <- gppd
+    2)  ‘wepp_id’  in gppd to 'plant_id' in platts
+        - could use this mapping to chain entso << platts << gppd
     3) plant, country, fuel_type are strong keys
+        - potential order funnel: country >> fuel_type >> plant name
 
 
-Number of entries in each dataset:
-    entso: 50
-    platts: 68395
-    gppd: 29910
+Text processing
+    - lowercase all
+    - remove abbreviation from country '(XX)'
+    - reprocess 'england & wales'
+
+Join
+    - join on country, fuel_type, plant name
+    - could pick smallest text distance from plant name?
+    
+
+
+
+Shape of each dataset:
+    entso: 50, 7
+    platts: 68395, 13
+    gppd: 29910, 11
 
 
 Ideas of matching along entso columns
@@ -31,7 +44,8 @@ entso.csv columns:
     unit_id	
     unit_capacity_mw	
     unit_fuel	
-    country	unit_name	
+    country	
+    unit_name	
     plant_name	
     plant_capacity_mw
 
@@ -42,25 +56,25 @@ gppd.csv columns:
     longitude	
     wepp_id	
     country	
-    country_long	
+    *country_long	
     plant_capacity_mw	
-    plant_primary_fuel	
+    *plant_primary_fuel	
     commissioning_year	
     owner
 
 platts.csv columns:
     plant_id	
     unit_id	
-    PLANT	
+    *PLANT	
     UNIT	
     COMPANY	
     UNIT_CAPACITY_MW	
     YEAR	
-    UNIT_FUEL	
+    *UNIT_FUEL	
     CITY	
     STATE	
     AREA	
-    COUNTRY	
+    *COUNTRY	
     SUBREGION
 
 
