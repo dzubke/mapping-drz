@@ -26,14 +26,15 @@ def clean_data(df_list:list, id_columns:list)->list:
     return df_list
 
 
-def remove_pattern(series:pd.Series, pattern:str)->pd.Series:
+def replace_pattern(series:pd.Series, pattern:str, replace:str)->pd.Series:
     """
     Removes all occurances of the regex pattern in the input series
     Arguments:
         series - pd.Series
         pattern - str: regex pattern that specifies the text to be removed
+        replace - str: string that will be substituted
     Returns:
         series - pd.Series: series with all matches to pattern removed
     """
     assert type(series)==pd.Series
-    return series.str.replace(pattern, '').str.strip()
+    return series.str.replace(pattern, replace).str.strip()
