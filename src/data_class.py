@@ -23,7 +23,7 @@ class Dataset:
         Performs processing steps on the dataframes including:
              - lowering the case of all strings (objects)
              - stripping out whitespace
-        Note: the column_id desfined in self.id_column are not processe
+        Note: the column_id defined in self.id_column is not processed
         Returns:
             None - all actions are done in-place
         """
