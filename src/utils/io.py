@@ -27,7 +27,10 @@ def csv_to_dict(csv_path:str)->dict:
         return csv_dict
 
 
-
-
-def write_csv(df:pd.DataFrame, output_csv:str)->None:
-    raise NotImplementedError
+def write_to_csv(in_df:pd.DataFrame, out_path:str, write_col:list=None)->None:
+    """
+    writes a the columns in write_col of the input pandas dataframe 
+    to csv at the give out_path
+    """
+    assert(isinstance(in_df, pd.DataFrame))
+    in_df.to_csv(out_path, columns=write_col, index=False)
