@@ -4,25 +4,32 @@ This project joins three datasets of powerplant data into a single table written
 
 # Setup
 
-Download the three datasets and put them in a directory. 
+With conda: 
+```
+conda env create -f environment.yml
+```
 
-In an new environment run:
-
-conda install --file requirements.txt
+With pip: 
+Create a new environment with python 3.7. Then run: 
+'''
+ pip install -r requirements.txt 
+'''
 
 # Run
-S
-Navigate to src directory and run command:
-	cd src
-	python mapping.py
+
+Navigate to src directory and run the mapping command:
+```
+cd src
+python mapping.py
+```
 
 
 # Command defaults
 
 You can set the directory where the data is downloaded with the
---dataset-dir option in the mapping.py command to this directory.The default option is "./data".
+`--dataset-dir` option in the mapping.py command to this directory.The default option is `"./data"`.
 
-You can also specify the filepath of the output csv with the --output-csv option. The default is "./result/mapping_drz.csv"
+You can also specify the filepath of the output csv with the `--output-csv` option. The default is `"./result/mapping_drz.csv"`
 
 
 # Future Work
